@@ -1,6 +1,7 @@
 import { Camera, CameraType } from 'expo-camera';
 import { useState, useEffect } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { uploadImage } from '../../services/Services';
 
 function ScanScreen({ navigation }) {
     const [hasPermission, setHasPermission] = useState(null);
@@ -25,11 +26,9 @@ function ScanScreen({ navigation }) {
     async function takePicture() {
         if (camera) {
             const photo = await camera.takePictureAsync();
-            console.log(photo.uri);
-
-            // TODO: Send photo to backend for processing
-
-            navigation.navigate('Result', { rawImage: photo.uri });
+    
+            // Navigate to the new screen and pass the image data
+            navigation.navigate('SelectCategory', { rawImage: photo.uri });
         }
     }
 

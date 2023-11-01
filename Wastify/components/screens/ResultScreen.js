@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Image, Alert } from 'react-native';
 
 function ResultScreen({ navigation, route }) {
     const [image, setImage] = useState(null);
 
     useEffect(() => {
-        const { rawImage } = route.params;
+        const { rawImage, result } = route.params;
+        alert(result);
         setImage(rawImage);
         console.log(rawImage);
     }, []);
@@ -13,6 +14,9 @@ function ResultScreen({ navigation, route }) {
     return (
     <View style={styles.container}>
         <Image source={{ uri: image }} style={styles.image} />
+        <TouchableOpacity onPress={() => navigation.navigate('Scan')} style={styles.button} >
+            <Text style={styles.buttonText}>Scan Again</Text>
+        </TouchableOpacity>
     </View>
   );
 };
@@ -28,7 +32,20 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         resizeMode: 'contain',
-    }
+    },
+    button: {
+        position: 'absolute',
+        bottom: 50,
+        backgroundColor: '#118ab2',
+        padding: 10,
+        borderRadius: 5,
+        width: 200,
+        alignItems: 'center',
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 20,
+    },
 });
 
 export default ResultScreen;

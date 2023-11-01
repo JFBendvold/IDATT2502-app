@@ -1,0 +1,28 @@
+{
+    "materials": {
+      "plastic": {
+        "description": "Plastic is a synthetic or semi-synthetic material that's durable, lightweight, and flexible. It's made from polymers, which are long chains of molecules, and can be molded into a variety of shapes and products.",
+        "recyclingGuide": "1. Clean and rinse plastic items to remove food and liquid residues. \n2. Separate plastics by their resin code (usually a number inside the recycling symbol on the bottom of the item). \n3. Avoid recycling plastic bags in curbside bins; instead, return them to grocery stores that have dedicated collection bins. \n4. Check with your local recycling program to know which types of plastics they accept."
+      },
+      "metal": {
+        "description": "Metals, like aluminum and steel, are elements that can be reused and recycled multiple times without degrading their properties.",
+        "recyclingGuide": "1. Rinse or clean metal containers like cans to remove residues. \n2. It's often not necessary to remove labels; recycling processes will handle them. \n3. Crush cans to save space. \n4. Place metal items in your curbside recycling bin or take them to a local recycling drop-off point."
+      },
+      "cardboard": {
+        "description": "Cardboard is a thick paper material with a corrugated layer, commonly used for packaging.",
+        "recyclingGuide": "1. Flatten cardboard boxes to save space. \n2. Remove any non-cardboard materials, such as tape or bubble wrap. \n3. Keep cardboard dry; wet cardboard might not be accepted by some recyclers. \n4. Place in your curbside recycling bin or take to a recycling center."
+      },
+      "paper": {
+        "description": "Paper is a thin material made from fibers, usually derived from wood, and is used for writing, printing, and packaging.",
+        "recyclingGuide": "1. Remove any non-paper components, such as plastic windows from envelopes. \n2. Avoid recycling paper that's been contaminated with food, like used pizza boxes. \n3. Shredded paper should be placed in a paper bag before recycling to prevent it from becoming litter. \n4. Use your curbside recycling bin or drop off at a local recycling center."
+      },
+      "trash": {
+        "description": "Trash refers to waste material or unwanted items that are not recyclable and need to be disposed of properly.",
+        "recyclingGuide": "1. Ensure non-recyclable items are disposed of in a trash bin. \n2. Avoid placing hazardous waste, electronics, or batteries in regular trash. \n3. Use trash bags to prevent littering and make waste management easier. \n4. Always dispose of trash in designated areas or facilities."
+      },
+      "glass": {
+        "description": "Glass is a hard material, typically transparent or translucent, made by fusing sand with soda, lime, and sometimes other ingredients.",
+        "recyclingGuide": "1. Rinse glass containers to remove residues. \n2. It's usually not necessary to remove labels from glass containers. \n3. Separate glass by color if required by your local recycling program. \n4. Avoid recycling certain types of glass like ceramics, ovenware, or window glass in curbside bins. \n5. Use a recycling bin or drop off at a local recycling point."
+      }
+    }
+}
