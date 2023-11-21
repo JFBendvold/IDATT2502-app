@@ -1,13 +1,16 @@
 import { Camera, CameraType } from 'expo-camera';
 import { useState, useEffect } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { uploadImage } from '../../services/Services';
+import { uploadImage, scanImage } from '../../services/Services';
+import { Buffer } from 'buffer';
 
 function ScanScreen({ navigation }) {
     const [hasPermission, setHasPermission] = useState(null);
     const [camera, setCamera] = useState(null);
+    const [resultImage, setResultImage] = useState(null);
 
     useEffect(() => {
+        setResultImage(null);
         const getScannerPermissions = async () => {
           const { status } = await Camera.requestCameraPermissionsAsync();
           setHasPermission(status === 'granted');
@@ -24,11 +27,39 @@ function ScanScreen({ navigation }) {
     }
 
     async function takePicture() {
+        /*
         if (camera) {
             const photo = await camera.takePictureAsync();
     
             // Navigate to the new screen and pass the image data
             navigation.navigate('SelectCategory', { rawImage: photo.uri });
+        }
+        */
+    }
+
+    async function scan() {
+        console.log('scan');
+        if (!camera) {
+            return;
+        }
+
+        const photo = await camera.takePictureAsync();
+        camera.pausePreview();
+
+        try {
+            const response = await scanImage(photo.uri);
+
+            response.data.forEach((item) => {
+                console.log(item.class + " " + (item.probability).toFixed(2) + "%");
+            });
+
+            const imageObjectURL = "data:image/jpeg;base64," + response.data[0].image;
+    
+            navigation.navigate('Result', { data: response.data });
+            camera.resumePreview();
+        } catch (error) {
+            alert(error);
+            camera.resumePreview(); // Make sure to resume preview if there's an error
         }
     }
 
@@ -41,7 +72,7 @@ function ScanScreen({ navigation }) {
             autoFocus={Camera.Constants.AutoFocus.on}
             flashMode={Camera.Constants.FlashMode.off}
         >
-            <TouchableOpacity onPress={takePicture} style={styles.button}>
+            <TouchableOpacity onPress={scan} style={styles.button}>
             </TouchableOpacity>
         </Camera>
     </View>

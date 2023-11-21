@@ -1,6 +1,7 @@
 import axios from "axios";
+import {Alert} from "react-native";
 
-const API_URL = "http://10.24.39.248:8080/"; // TODO: Change this to the server's IP address.
+const API_URL = "http://10.24.5.79:5000/"; // TODO: Change this to the server's IP address.
 
 /**
  * Uploads an image to the server.
@@ -25,5 +26,27 @@ export const uploadImage = (imageURI, category) => {
         });
     } catch (error) {
         console.log(error);
+        Alert.alert("Error", error.message);
+    }
+}
+
+export const scanImage = (imageURI) => {
+    const formData = new FormData();
+    formData.append("file", {
+        uri: imageURI,
+        name: "image.jpg",
+        type: "image/jpeg",
+    });
+
+    try {
+        return axios.post(API_URL + "process_image", formData, {
+            headers: {
+                "Content-Type": "multipart/form-data",
+                'Accept': 'application/json',
+            },
+        });
+    } catch (error) {
+        console.log(error);
+        Alert.alert("Error", error.message);
     }
 }

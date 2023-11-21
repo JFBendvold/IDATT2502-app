@@ -23,6 +23,14 @@
       "glass": {
         "description": "Glass is a hard material, typically transparent or translucent, made by fusing sand with soda, lime, and sometimes other ingredients.",
         "recyclingGuide": "1. Rinse glass containers to remove residues. \n2. It's usually not necessary to remove labels from glass containers. \n3. Separate glass by color if required by your local recycling program. \n4. Avoid recycling certain types of glass like ceramics, ovenware, or window glass in curbside bins. \n5. Use a recycling bin or drop off at a local recycling point."
+      },
+      "hazardous": {
+        "description": "Hazardous waste is any material that can be harmful to human health or the environment if not disposed of properly.",
+        "recyclingGuide": "1. Follow the instructions on the label of hazardous waste products. \n2. Avoid mixing hazardous waste with regular trash. \n3. Take hazardous waste to a designated collection facility or event. \n4. Never pour hazardous waste down the drain or into the ground."
+      },
+      "yolo_results": {
+        "description": "YOLO results",
+        "recyclingGuide": "YOLO results"
       }
     }
 }
