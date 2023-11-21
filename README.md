@@ -18,7 +18,7 @@ IDATT2502-App is a mobile application developed using Expo and React Native. It 
 - **Environment Variables**: Set up necessary environment variables for API endpoints and other configuration details.
 
 ## Running the Application
-- **Start the App**: Run `expo start` to start the Expo development server.
+- **Start the App**: Run `npm run start` to start the Expo development server.
 - **Running on Emulator/Simulator**: Open the application in an iOS simulator or Android emulator for testing.
 - **Running on a Physical Device**: Scan the QR code provided by the Expo development server using the Expo Go app on your mobile device.
 
