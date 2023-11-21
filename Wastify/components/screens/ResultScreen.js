@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View, Image, Dimensions, ScrollView } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faArrowLeft, faArrowRight, faStickyNote, faTrash, faBottleWater, faWineGlass } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowRight, faStickyNote, faTrash, faBottleWater, faWineGlass, faHamburger } from '@fortawesome/free-solid-svg-icons';
 import info from '../../utils/info.json';
 
 const window = Dimensions.get('window');
@@ -79,6 +79,9 @@ function ResultScreen({ navigation, route }) {
         }
         else if (category === "glass") {
             return faWineGlass;
+        }
+        else if (category === "food") {
+            return faHamburger;
         }
         else {
             return faTrash;

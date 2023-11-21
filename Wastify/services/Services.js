@@ -1,7 +1,7 @@
 import axios from "axios";
 import {Alert} from "react-native";
 
-const API_URL = "http://10.24.5.79:5000/"; // TODO: Change this to the server's IP address.
+const API_URL = "http://10.24.5.56:5000/"; // TODO: Change this to the server's IP address.
 
 /**
  * Uploads an image to the server.

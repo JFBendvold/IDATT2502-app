@@ -28,6 +28,10 @@
         "description": "Hazardous waste is any material that can be harmful to human health or the environment if not disposed of properly.",
         "recyclingGuide": "1. Follow the instructions on the label of hazardous waste products. \n2. Avoid mixing hazardous waste with regular trash. \n3. Take hazardous waste to a designated collection facility or event. \n4. Never pour hazardous waste down the drain or into the ground."
       },
+      "food": {
+        "description": "Food waste is any food that's discarded or uneaten, including food scraps, spoiled food, and leftovers.",
+        "recyclingGuide": "1. Compost food waste to reduce the amount of trash you produce. \n2. Avoid throwing food waste in the trash, as it can attract pests and rodents. \n3. Donate food that's still edible to local food banks or shelters. \n4. Use a food waste bin or composting system to dispose of food waste."
+      },
       "yolo_results": {
         "description": "YOLO results",
         "recyclingGuide": "YOLO results"
